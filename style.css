@@ -179,56 +179,6 @@ li:hover{
   justify-content: space-around;
 }
 
-#personal {
-  background: #2c3e50;
-  background-size: cover;
-  border: none;
-  border-radius: .15rem;
-  width: 45%;
-  text-align: center;
-  box-shadow: var(--box-shadow);
-}
-
-#bussiness {
-  background: #16a085;
-  background-size: cover;
-  border: none;
-  border-radius: .15rem;
-  width: 45%;
-  text-align: center;
-  box-shadow: var(--box-shadow);
-}
-
-#house {
-  background: #7f8c8d;
-  background-size: cover;
-  border: none;
-  border-radius: .15rem;
-  width: 45%;
-  text-align: center;
-  box-shadow: var(--box-shadow);
-}
-
-#education {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
-  background-size: cover;
-  border: none;
-  border-radius: .15rem;
-  width: 45%;
-  box-shadow: var(--box-shadow);
-  text-align: center;
-}
-
-
-#personal p,
-#bussiness p,
-#house p,
-#education p {
-  color: white;
-  margin: .7rem 0;
-  font-size: 1rem;
-}
-
 #Amount {
   background-color: #f39c12;
   background-size: cover;
@@ -636,6 +586,17 @@ select {
 }
 
 
+/* Chart container */
+.chart-container{
+  padding: 2.5rem;
+  width: 100%;
+  height: 65vh;
+}
+/*          */
+
+
+
+
 
 /* All loans */
 .loan-status {
@@ -652,8 +613,16 @@ select {
 
 .loan-status-b {
   width: 20%;
+  
 }
-
+.loan-status-b button:focus{
+  background: #27ae60;
+  color: white;
+}
+.loan-status-b button{
+  font-weight: 700;
+  color: #3b3b3b;
+}
 .home {
   display: none;
 }

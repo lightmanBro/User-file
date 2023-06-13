@@ -15,28 +15,28 @@
 // code to toggle the table //
 
 window.addEventListener('load', function() {
-    // var tableContent = document.getElementsByClassName('home');
-    // var tableHeaders = document.getElementsByClassName('button');
-    // tableContent[0].classList.add('show');
-    // tableHeaders[0].classList.add('active1');
-    // console.log(tableContent);
-    // for (var i = 0; i < tableHeaders.length; i++) {
-    //   tableHeaders[i].addEventListener('click', function() {
-    //     var colIndex = Array.prototype.indexOf.call(tableHeaders, this);
-    //     for (var j = 0; j < tableContent.length; j++) {
-    //       if (j !== colIndex) {
-    //         tableContent[j].classList.remove('show');
-    //       }
-    //     }
-    //     for (var j = 0; j < tableHeaders.length; j++) {
-    //       if (j !== colIndex) {
-    //         tableHeaders[j].classList.remove('active1');
-    //       }
-    //     }
-    //     tableContent[colIndex].classList.toggle('show');
-    //     tableHeaders[colIndex].classList.add('active1');
-    //   });
-    // }
+    var tableContent = document.getElementsByClassName('home');
+    var tableHeaders = document.getElementsByClassName('button');
+    tableContent[0].classList.add('show');
+    tableHeaders[0].classList.add('active1');
+    console.log(tableContent);
+    for (var i = 0; i < tableHeaders.length; i++) {
+      tableHeaders[i].addEventListener('click', function() {
+        var colIndex = Array.prototype.indexOf.call(tableHeaders, this);
+        for (var j = 0; j < tableContent.length; j++) {
+          if (j !== colIndex) {
+            tableContent[j].classList.remove('show');
+          }
+        }
+        for (var j = 0; j < tableHeaders.length; j++) {
+          if (j !== colIndex) {
+            tableHeaders[j].classList.remove('active1');
+          }
+        }
+        tableContent[colIndex].classList.toggle('show');
+        tableHeaders[colIndex].classList.add('active1');
+      });
+    }
   });
   
   
@@ -229,3 +229,52 @@ window.addEventListener('DOMContentLoaded', function() {
   var currentDate = new Date();
   dateElement.textContent = currentDate.toDateString();
 });
+
+
+// Function to generate a random number between min and max (inclusive)
+// Sample data for 12 months
+var loanData = {
+  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+  disbursedAmount: [500000, 700000, 90000, 120000, 900000, 1000000, 250000, 1500000, 3500000, 2600000, 120000, 1000000],
+  collectedAmount: [400000, 600000, 80000, 100000, 800000, 800000, 1800000, 800000, 900000, 1040000, 1100000, 900000,],
+  dueAmount: [100000, 150000, 108000, 89000, 200000, 130000, 200000, 300000, 200500, 1000000, 1000600, 100000]
+  };
+  
+  // Create a chart using Chart.js
+  var ctx = document.getElementById('loan-chart').getContext('2d');
+  var chart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+  labels: loanData.labels,
+  datasets: [
+  {
+  label: 'Disbursed Amount',
+  data: loanData.disbursedAmount,
+  backgroundColor: '#2ecc71'
+  },
+  {
+  label: 'Collected Amount',
+  data: loanData.collectedAmount,
+  backgroundColor: 'rgba(75, 192, 192, 0.6)'
+  },
+  {
+  label: 'Due Amount',
+  data: loanData.dueAmount,
+  backgroundColor: '#d35400'
+  }
+  ]
+  },
+  options: {
+  responsive: true,
+  maintainAspectRatio: false,
+  scales: {
+  x: {
+  stacked: true
+  },
+  y: {
+  stacked: true
+  }
+  }
+  }
+  });
+  
