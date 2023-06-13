@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<style>
+              body{
+                    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url(../images/personal.jpg);
+                    background-size: cover;
+                    padding: 0;
+                    margin: 0;
+          }
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+form {
+          background-color: #ccc;
+                    width: 50%;
+                    height: 25%;
+                    max-width: 70%;
+                    padding: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-radius: .35rem;
+}
+
+h2 {
+  text-align: center;
+}
+.otp-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  /* border: 2px solid green; */
+}
+input[type="text"] {
+  width: 10%;
+  height: 30px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: #ccc;
+}
+.btn{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+}
+button[type="submit"] {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  background-color: rgb(22, 22, 120);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: .5rem;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+header{
+                    border: 2px solid red;
+                    padding: 1rem;
+          }
+@media only screen and (max-width: 850px){
+          form {
+          background-color: #ccc;
+                    width: 75%;
+                    height: 25%;
+                    max-width: 70%;
+                    padding: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-radius: .35rem;
+}
+}
+</style>
+
+<body>
+  <div class="container">
+          <header>
+                    dcgfvgbhnkbvcxdcfgvjhb
+          </header>
+    <form id="otpForm">
+      <h2>Enter OTP</h2>
+      <div class="otp-container">
+        <input type="text" maxlength="1" autofocus required>
+        <input type="text" maxlength="1" required>
+        <input type="text" maxlength="1" required>
+        <input type="text" maxlength="1" required>
+        <input type="text" maxlength="1" required>
+      </div>
+      <div class="btn">
+
+                <button type="submit"><a href="login.html">Submit</a> </button>
+      </div>
+    </form>
+  </div>
+  <script>
+          var otpInputs = document.querySelectorAll("#otpForm input[type='text']");
+
+for (var i = 0; i < otpInputs.length; i++) {
+  otpInputs[i].addEventListener("input", moveFocus);
+}
+
+function moveFocus(event) {
+  var currentInput = event.target;
+  var maxLength = parseInt(currentInput.getAttribute("maxlength"));
+
+  if (currentInput.value.length === maxLength) {
+    var nextInput = currentInput.nextElementSibling;
+    if (nextInput !== null) {
+      nextInput.focus();
+    }
+  }
+}
+
+  </script>
+</body>
+</html>
+
+</body>
+</html>
