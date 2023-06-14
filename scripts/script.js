@@ -313,3 +313,94 @@ var loanData = {
   }
   }
   });
+
+
+//Charts for loans every day
+
+  const dailyLoanData = {
+    labels: ["8:00 AM", "10:00 AM", "12:00 PM", "2:00 PM", "4:00 PM", "6:00 PM", "8:00 PM"],
+    loanRequests: [5, 7, 3, 10, 8, 6, 9],
+    loansApproved: [4, 6, 2, 8, 7, 5, 7],
+    loansRejected: [1, 1, 1, 2, 1, 1, 2],
+    loanDataLinks: [
+        "Loans.html",
+        "Loans.html",
+        "Loans.html",
+        "Loans.html",
+        "Loans.html",
+        "Loans.html",
+        "Loans.html"
+    ]
+};
+
+ // Get the canvas element and its 2D context
+ const canvas = document.getElementById("daily-loan-chart");
+ const context = canvas.getContext("2d");
+
+ // Create the chart using Chart.js
+ new Chart(context, {
+     type: "line",
+     data: {
+         labels: dailyLoanData.labels,
+         datasets: [
+             {
+                 label: "Loan Requests",
+                 borderColor: "#0099ff",
+                 fill: false,
+                 data: dailyLoanData.loanRequests
+             },
+             {
+              label: "Loans Approved",
+              borderColor: "#00ff00",
+              fill: false,
+              data: dailyLoanData.loansApproved
+          },
+          {
+              label: "Loans Rejected",
+              borderColor: "#ff0000",
+              fill: false,
+              data: dailyLoanData.loansRejected
+          }
+      ]
+  },
+  options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            },
+            scaleLabel: {
+                display: true,
+                labelString: "Number of Loans"
+            }
+        }],
+        xAxes: [{
+            scaleLabel: {
+                display: true,
+                labelString: "Time of Day"
+            }
+        }]
+    },
+    tooltips: {
+      mode: "index",
+      intersect: false,
+      callbacks: {
+          title: function(tooltipItem, data) {
+              const dataIndex = tooltipItem[0].index;
+              const loanDataLink = dailyLoanData.loanDataLinks[dataIndex];
+          },
+          label: function(tooltipItem, data) {
+              const datasetLabel = data.datasets[tooltipItem.datasetIndex].label || "";
+              const value = tooltipItem.yLabel;
+              return datasetLabel + ": " + value;
+          }
+      }
+  }
+}
+});
+
+
+
+
+
+
