@@ -278,3 +278,38 @@ var loanData = {
   }
   });
   
+  weeklyData = {
+    labels :['Monday','Tuesday','Wednessday','Thursday','Friday'],
+    disbursedAmount:[507280,450173,876000,1145320,748000],
+    collectedAmount:[500000,354000,760000,650000,548000],
+    dueAmount:[614560,454360,1700000,2365000,1596000],
+
+  }
+
+  // Create a chart using Chart.js
+  var ctx = document.getElementById('weeky-loan-chart').getContext('2d');
+  var chart = new Chart(ctx, {type: 'bar',data: { labels: weeklyData.labels,
+    datasets: [
+  {label: 'Disbursed Amount',
+  data: weeklyData.disbursedAmount,
+  backgroundColor: '#2ecc71'},
+  {label: 'Collected Amount',
+  data: weeklyData.collectedAmount,
+  backgroundColor: 'rgba(75, 192, 192, 0.6)'},
+
+  {label: 'Due Amount',
+  data: weeklyData.dueAmount,
+  backgroundColor: '#d35400'}]},
+  options: {
+  responsive: true,
+  maintainAspectRatio: false,
+  scales: {
+  x: {
+  stacked: true
+  },
+  y: {
+  stacked: true
+  }
+  }
+  }
+  });

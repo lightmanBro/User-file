@@ -11,72 +11,71 @@
   <link rel="stylesheet" href="mobile.css">
   <link rel="stylesheet" href="card.css">
   <link rel="stylesheet" href="color.css">
-  <title>Order-Page-Tamopei</title>
+  <title>Dashboard</title>
 </head>
 <style>
-  .body-content{
+  .body-content {
     width: 100%;
     float: right;
   }
-  .box-card{
-  width: 90%;
-  margin: 0;
-  float: right;
-  margin: 0;
-  
-}
-@media only screen and (max-width: 850px){
-  .box-card{
-    width: 100%;
-  }
-}
 
+  .box-card {
+    width: 90%;
+    margin: 0;
+    float: right;
+    margin: 0;
+
+  }
+
+  @media only screen and (max-width: 850px) {
+    .box-card {
+      width: 100%;
+    }
+  }
 </style>
+
 <body>
 
-    <main>
-      <header>
-        <div class="logo">
+  <main>
+    <header>
+      <div class="logo">
 
+      </div>
+      <div class="welcome">
+        <p>Welcome Adedoyin Samuel</p>
+      </div>
+      <div class="info">
+        <div class="image">
+          <img src="" alt="">
         </div>
-        <div class="welcome">
-          <p>Welcome Adedoyin Samuel</p>
+        <div class="id">
+          <p> ID: 100349287</p>
         </div>
-        <div class="info">
-          <div class="image">
-            <img src="" alt="">
-          </div>
-          <div class="id">
-            <p> ID: 100349287</p>
-          </div>
-        </div>
-      </header>
-      <section class="body-content">
-        <div class="navs" id="overlay">
-          <nav id="popupContainer">
+      </div>
+    </header>
+    <section class="body-content">
+      <div class="navs" id="overlay">
+        <nav id="popupContainer">
           <ul>
             <li id="closePopup" style="font-size: 2rem;padding: .3rem; border: none;">&times;</li>
 
             <li class="active1"><a href="index.html">
-              <i class="fa-solid fa-house"></i><span>HOME</span>
-            </a>
+                <i class="fa-solid fa-house"></i><span>HOME</span>
+              </a>
             </li>
             <li class=""><a href="Loans.html">
-              <i class="fa-solid fa-landmark"></i><span>LOANS</span>
-            </a>
+                <i class="fa-solid fa-landmark"></i><span>LOANS</span>
+              </a>
             </li>
-           
+
             <li class=""><a href="Customers.html">
-              <i class="fa-solid fa-rectangle-xmark"></i></i><span>CUSTOMERS</span>
-            </a>
+                <i class="fa-solid fa-rectangle-xmark"></i></i><span>CUSTOMERS</span>
+              </a>
             </li>
- <li class=""><a href="Profile.html">
-              <i class="fa-solid fa-user"></i><span>PROFILE</span>
-            </a>
+            <li class=""><a href="Profile.html">
+                <i class="fa-solid fa-user"></i><span>PROFILE</span>
+              </a>
             </li>
-            <!-- <li onclick="toggleTable(3)">
-              <i class="fa-solid fa-lock"></i></i><span>PASSWORD</span>
-            </li> -->
             <li class="">
               <i class="fa-solid fa-power-off"></i><span>LOGOUT</span>
             </li>
@@ -84,110 +83,92 @@
         </nav>
       </div>
 
-        <div class="box-card">
-<div class="table-content">
-<div class="cont">
-  <div class="nav" id="openPopup">
-    <i  class="fa-sharp fa-solid fa-bars"></i>
-  </div>
-  <div class="content ">
-   
-    <div class="loan-card" >
-      <div class="card-flex">
+      <div class="box-card">
+        <div class="table-content">
+          <div class="cont">
+            <div class="nav" id="openPopup">
+              <i class="fa-sharp fa-solid fa-bars"></i>
+            </div>
+            <div class="content ">
 
-      <div class="card" id="Amount">
-<p><span>PENDING LOAN</span></p>
-<P>20</P>
-      </div>
-      <div class="card" id="calendar">
-        <p><span>ACTIVE LOAN</span></p>
-        <P>60</P>
-      </div>
-    </div>
-    <div class="card-flex">
+              <div class="loan-card">
+                <div class="card-flex">
 
-      <div class="card" id="due">
-        <p><span>OVER DUE</span></p>
-        <P>12</P>
-      </div>
-      <div class="card" id="interest">
-        <p><span>COMPLETED LOAN</span></p>
-        <P>40,000</P>
-      </div>
-      </div>
+                  <div class="card" id="Amount">
+                    <a href="./Loans.html?active">
+                      <p><span>PENDING LOAN</span></p>
+                      <P>20</P>
+                    </a>
+                  </div>
+                  <div class="card" id="calendar">
+                    <p><span>ACTIVE LOAN</span></p>
+                    <P>60</P>
+                  </div>
+                </div>
+                <div class="card-flex">
 
-    </div>
-  </div>
-  <div class="content ">
-    <div class="loan-card">
-      <div class="card-flex">
+                  <div class="card" id="due">
+                    <p><span>OVER DUE</span></p>
+                    <P>12</P>
+                  </div>
+                  <div class="card" id="interest">
+                    <p><span>COMPLETED LOAN</span></p>
+                    <P>40,000</P>
+                  </div>
+                </div>
 
-      <div class="card" id="total">
-        <p><span>TOTAL PENDING</span></p>
-        <P>340,000</P>
-      </div>
-      <div class="card" id="time">
-        <p><span>TOTAL ACTIVE</span></p>
-        <P>500,000</P>
-      </div>
-      </div>
-      <div class="card-flex">
+              </div>
+            </div>
+            <div class="content ">
+              <div class="loan-card">
+                <div class="card-flex">
 
-      <div class="card" id="status">
-        <p><span>TOTAL DUE</span></p>
-        <P>300,000</P>
-      </div>
-      <div class="card" id="months">
-        <p><span>TOTAL CUSTOMERS</span></p>
-        <P>50</P>
-      </div>
-      </div>
-    </div>
-  </div>
-</div>
+                  <div class="card" id="total">
+                    <p><span>TOTAL PENDING</span></p>
+                    <P>340,000</P>
+                  </div>
+                  <div class="card" id="time">
+                    <p><span>TOTAL ACTIVE</span></p>
+                    <P>500,000</P>
+                  </div>
+                </div>
+                <div class="card-flex">
 
- 
-  <div class="loan-card">
-    <div class="chart-container">
-      <canvas id="loan-chart"></canvas>
-    </div>
-  </div>
-
-</div>
-         
-       
-<!-- /Password-->
-<!-- modal box -->
-<!-- client-profile modal -->
-
-        
-<!-- create loan modal -->
-
-        <!-- create personal loan -->
-
- 
-        <!-- create house loan -->
-
-        <!-- create business loan -->
+                  <div class="card" id="status">
+                    <p><span>TOTAL DUE</span></p>
+                    <P>300,000</P>
+                  </div>
+                  <div class="card" id="months">
+                    <p><span>TOTAL CUSTOMERS</span></p>
+                    <P>50</P>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
-        <!-- create personal loan -->
+          <div class="loan-card">
+            <div class="chart-container">
+              <canvas id="loan-chart"></canvas>
+            </div>
+          </div>
 
-       
-
-
-
-
-       
-        
+          <div class="loan-card">
+            Weekly
+            <div class="chart-container">
+              <canvas id="weeky-loan-chart"></canvas>
+            </div>
+          </div>
         </div>
-   
-      </section>
-    
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <script src="./script.js"></script>
+      </div>
+
+    </section>
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./scripts/script.js"></script>
 </body>
 
 </html>
