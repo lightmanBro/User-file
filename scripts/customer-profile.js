@@ -1,3 +1,8 @@
+
+userName = sessionStorage.getItem("userName");
+userId = sessionStorage.getItem("userId");
+
+
 const profile = {
     //User
     userName: document.querySelector(".welcome p span"),
@@ -171,12 +176,6 @@ const profile = {
     profile.bankModal.accountType.value = profile.bank.accountType.innerHTML.toUpperCase();
     console.log(profile.bank.name)
   })
-  
-  
-  
-  
-  userName = sessionStorage.getItem("userName");
-  userId = sessionStorage.getItem("userId");
   
   /*
   1.Retrieve data from the database and map it to the innrHtml

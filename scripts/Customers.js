@@ -1,0 +1,3 @@
+/*Customer data retrieved from the database will be mapped to the customer table individually and their id will be
+used to query the database whenever any of them is clicked.
+*/

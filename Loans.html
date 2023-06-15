@@ -141,19 +141,19 @@
           <div class="loan-status">
 
             <div class="loan-status-b">
-              <button class="button" onclick="toggleTable(0)" style="display: block;"><span>Pending</span> </button>
+              <button class="button" onclick="toggleTable(0)" style="display: block;">Pending </button>
 
             </div>
             <div class="loan-status-b">
-              <button class="button" onclick="toggleTable(0)"><span>Active </span></button>
+              <button class="button" onclick="toggleTable(0)">Active </button>
 
             </div>
             <div class="loan-status-b">
-              <button class="button" onclick="toggleTable(0)"><span>Completed</span></button>
+              <button class="button" onclick="toggleTable(0)">Completed</button>
 
             </div>
             <div class="loan-status-b">
-              <button class="button" onclick="toggleTable(0)"><span>Due</span></button>
+              <button class="button" onclick="toggleTable(0)">Due</button>
 
             </div>
 
@@ -164,6 +164,8 @@
             <p>Loan History</p>
             <p>All Loans Application: 10</p>
           </div>
+
+          <!-- rewrite the logic for opening and closing all the modal boxes of loans -->
           <div id="pending" class=" home">
             <table class="table">
               <thead>
@@ -237,7 +239,7 @@
                 <th>Status</th>
                 <th>Action</th>
               </thead>
-              <tbody>
+              <tbody id="dueLoanData">
                
                 
                 
@@ -269,18 +271,19 @@
                   <h3>QUICKFUNDS</h3>
                   <p>Date: <span id="date"></span></p>
                 </div>
-                <div class="receipt-content">
-                  <p><strong>Name:</strong>Adedoyin Samuel</p>
-                  <p><strong>Merchant:</strong>Global Tech</p>
-                  <p><strong>Loan Amount:</strong> 10,000</p>
-                  <p><strong>Interest Rate:</strong> 5%</p>
-                  <p><strong>Total:</strong> 15,000</p>
-                  <p><strong>Loan Date:</strong> 25-09-2023</p>
-                  <p><strong>Loan Duration:</strong> 12 months</p>
-                  <p><strong>Due Date:</strong> 25-09-2023</p>
-                  <p><strong>Monthly Payment</strong> 1,250</p>
-                  <p><strong>Loan Status:</strong> Completed</p>
-
+                <div class="Active-loan-receipt-content" id="receipt-container">
+                  <!-- to be redesigned -->
+                  <p>Name:<span>Adedoyin Samuel</span></p>
+                  <p>Merchant:<span>Global Tech</span></p>
+                  <p>Loan Amount:<span> 10,000</span></p>
+                  <p>Interest Rate:<span> 5%</span></p>
+                  <p>Total:<span> 15,000</span></p>
+                  <p>Loan Date:<span> 25-09-2023</span></p>
+                  <p>Loan Duration:<span> 12 months</span></p>
+                  <p>Due Date:<span> 25-09-2023</span></p>
+                  <p>Monthly Payment<span> 1,250</span></p>
+                  <p>Loan Status:<span> Completed</span></p>
+                
                 </div>
 
                 <div class="footer">
@@ -294,7 +297,7 @@
 
             <div class="container" id="loan-receipt">
               <div class="exit">
-                <span class="close" onclick="closeModalA(), closeAP()">&times;</span>
+                <span class="close" onclick="closeModalA()">&times;</span>
               </div>
               <h2>Loan Receipt</h2>
               <div class="receipt">
@@ -304,29 +307,31 @@
                   <p>Date: <span id="date"></span></p>
                 </div>
                 <div class="receipt-content">
-                  <p><strong>Name:</strong>Adedoyin Samuel</p>
-                  <p><strong>Merchant:</strong>Global Technologies</p>
-                  <p><strong>Loan Amount:</strong> 10,000</p>
-                  <p><strong>Interest Rate:</strong> 5%</p>
-                  <p><strong>Total:</strong> 15,000</p>
-                  <p><strong>Loan Date:</strong> 25-09-2023</p>
-                  <p><strong>Loan Duration:</strong> 12 months</p>
-                  <p><strong>Due Date:</strong> 25-09-2023</p>
-                  <p><strong>Monthly Payment</strong> 1,250</p>
-                  <p><strong>Loan Status:</strong> Completed</p>
-
+                  <p>Name:<span>Adedoyin Samuel</span></p>
+                  <p>Merchant:<span>Global Tech</span></p>
+                  <p>Loan Amount:<span> 10,000</span></p>
+                  <p>Interest Rate:<span> 5%</span></p>
+                  <p>Total:<span> 15,000</span></p>
+                  <p>Loan Date:<span> 25-09-2023</span></p>
+                  <p>Loan Duration:<span> 12 months</span></p>
+                  <p>Due Date:<span> 25-09-2023</span></p>
+                  <p>Monthly Payment<span> 1,250</span></p>
+                  <p>Loan Status:<span> Completed</span></p>
+                
                 </div>
 
                 <div class="footer">
-                  <button class="p-button" style="background-color: rgb(32, 165, 32);">Approve</button>
-                  <button onclick="showAP()" class="p-button"
+                  <button id="dataApprove" class="p-button" style="background-color: rgb(32, 165, 32);">Approve</button>
+                  <button id="dataReject" onclick="showAP()" class="p-button"
                     style="background-color: rgb(203, 34, 34);">Reject</button>
+                    
                 </div>
                 <div class="footer" id="approve">
-                  <textarea name="" id="" cols="30" rows="10" placeholder="Please input reasons "></textarea>
+                  <span  onclick="closeAP()" style="background-color: rgb(203, 34, 34);"><b>close</b></span>
+                  <textarea id="rejectMessage" cols="30" rows="10" placeholder="Please input reasons "></textarea>
 
                   <div class="form-group">
-                    <input type="submit" value="Submit">
+                    <input type="submit">
                   </div>
                 </div>
               </div>

@@ -107,7 +107,7 @@ nav {
 }
 
 nav ul {
-  /* background: linear-gradient(to top,#2c3e508a, white); */
+  background: linear-gradient(to top,#2c3e508a, white);
   position: fixed;
   height: 100%;
   width: fit-content;
@@ -622,6 +622,9 @@ select {
 }
 .loan-status-b button:focus{
   background: #27ae60;
+  color: white;
+}
+.loan-status-b button span:active{
   color: white;
 }
 .loan-status-b button{

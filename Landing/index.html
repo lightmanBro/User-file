@@ -27,7 +27,6 @@ header{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   z-index: 0;
   display: none;
 }
@@ -36,9 +35,9 @@ header{
       /* display: none; */
       top: 0%;
       right: 0;
-      background-color:  rgb(22, 22, 120);
+      background-color:  #2ecc71;
      z-index: 999;
-     width: 50%;
+     width: 30%;
      float: right;
     }
     nav ul{
@@ -55,11 +54,11 @@ header{
       padding: 1rem;
      
     }
-    .logo{
+   /* .logo{
   width: 30%;
   background-color: grey;
   height: 60px;
-}
+}*/
 .nav{
             display: block;
           }
@@ -86,7 +85,7 @@ header{
           word-wrap: break-word;
           font-size: .9rem;
           color:  white;
-          background-color:  rgb(22, 22, 120);
+          background-color:  #2ecc71;
           text-align: center;
           border-radius: .5rem;
           text-align: left;
@@ -116,7 +115,7 @@ header{
           text-align: center;
           margin-left: 0;
           margin-bottom: 1rem;
-          color: rgb(22, 22, 120);
+          color: white;
 
 }
 .foot-box{
@@ -237,9 +236,7 @@ header{
   text-align: center;
 }       
 }
-#signs:hover{
-  background-color: transparent;
-}
+
 @media only screen and (max-width: 3750px){
   nav{
     top: 0;
@@ -256,7 +253,7 @@ vbnlvgbn
   <nav id="popupContainer">
           <ul>
             <li id="closePopup">&times;</li>
-           <a href="#">   <li>  Home  </li></a> 
+           <a href="/index.html"><li>Home</li></a> 
            <a href="#services">    <li> Services </li></a> 
              <a href="#about">    <li>About Us</li></a> 
              <a href="#contact">  <li>Contact Us</li></a>  
@@ -351,14 +348,14 @@ vbnlvgbn
                                                   <h3>Fast and Free</h3>
                                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse consequatur nam dicta labore mollitia, nihil molestiae provident iusto neque! Facere fuga et error rem numquam! Dolor, beatae! Quia, hic.</p>
                                         </div>
+                                        <div class="reason-card">
+                                          <h3>100% Safe and Secure</h3>
+                                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse consequatur nam dicta labore mollitia, nihil molestiae provident iusto neque! Facere fuga et error rem numquam! Dolor, beatae! Quia, hic.</p>
+                                </div>
                               </div>
                               <div class="reason-card-box">
                                         <div class="reason-card">
                                                   <h3>Hastle Free</h3>
-                                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse consequatur nam dicta labore mollitia, nihil molestiae provident iusto neque! Facere fuga et error rem numquam! Dolor, beatae! Quia, hic.</p>
-                                        </div>
-                                        <div class="reason-card">
-                                                  <h3>100% Safe and Secure</h3>
                                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse consequatur nam dicta labore mollitia, nihil molestiae provident iusto neque! Facere fuga et error rem numquam! Dolor, beatae! Quia, hic.</p>
                                         </div>
                               </div>
@@ -420,7 +417,7 @@ vbnlvgbn
                       
                             
                               <div class="form-group">
-                                <label for="loan-amount">Loan Amount:</label>
+                                <label for="loan-amount" class="loan-amount">Loan Amount:</label>
                                 <input type="range" id="loan-amount" min="1000" max="100000" step="1000" value="50000">
                                 <span id="loan-amount-value">$50,000</span>
                               </div>

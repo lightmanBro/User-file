@@ -207,6 +207,11 @@ const profile = {
     const url = 'phpfilepath'
     // sendToDb(url,urlEncodedData)
   })
+
+
+
+
+//   Design map the Emergncy contact with the data here
   profile.guarantorModal.submitBtn.addEventListener('click',(e)=>{
     e.preventDefault();
     let formData = new FormData();

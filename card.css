@@ -239,9 +239,11 @@ border-radius: 3px;
   margin: .5rem 0;
 }
 
-.header {
+.header p span {
   text-align: center;
   margin-bottom: 20px;
+  border-bottom: #2c3e50 1px solid;
+  color: #2c3e50;
 }
 
 .header h3{
@@ -267,26 +269,33 @@ border-radius: 3px;
   color: white;
 }
 .footer textarea{
+  padding: 1rem;
   outline: none;
-  margin: .5rem;
+  width: 100%;
+  margin: auto;
 }
 #approve{
   display: none;
 }
-.receipt-content    p {
-  margin: 5px 0;
-  font-size: 1rem;
-  /* border: 2px solid red; */
+.receipt-content p {
   display: flex;
+  padding: .5rem;
   justify-content: space-between;
+  border-bottom: #888 1px solid;
 }
 
 strong {
   font-weight: bold;
 }
-
-.receipt-content p span{
-color: #1ee494;
+.Active-loan-receipt-content p{
+  display: flex;
+  padding: .5rem;
+  justify-content: space-between;
+  border-bottom: #888 1px solid;
+}
+.receipt-content p,.Active-loan-receipt-content p, span{
+color: #157f55;
+font-weight: 600;
 }
 /* create loan modal */
 
@@ -295,7 +304,7 @@ color: #1ee494;
   width: 40%;
   margin: 0 auto;
   padding: 20px;
-  background: linear-gradient(to bottom, #f1c40f, #2ecc71);
+  background: #2ecc71;
   border: 1px solid #2c3e50;
   border-radius: 5px;
 }
