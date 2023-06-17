@@ -1,9 +1,7 @@
 fetch("./db/dummyData.json")
 .then(response => response.json())
 .then(data => {
-    data.forEach(element => {
-        processData(element);  
-    });
+    data.forEach(processData);
 })
 .catch(error => {
     console.error("Error reading JSON file:", error);
@@ -33,7 +31,7 @@ fetch("./db/dummyData.json")
 .then(response => response.json())
 .then(data => {
     //You can remove the map when you have data coming from the database its just used to change the status
-    data.map(items=>{return{...items,status:"Active"}}).forEach(element => {processDataActive(element);});
+    data.map(items=>{return{...items,status:"Active"}}).forEach(processDataActive);
 })
 .catch(error => {
     console.error("Error reading JSON file:", error);
@@ -63,7 +61,7 @@ fetch("./db/dummyData.json")
 .then(response => response.json())
 .then(data => {
     //You can remove the map when you have data coming from the database its just used to change the status
-    data.map(items=>{return{...items,status:"Completed"}}).forEach(element => {processDataCompleted(element);});
+    data.map(items=>{return{...items,status:"Completed"}}).forEach(processDataCompleted);
 })
 .catch(error => {
     console.error("Error reading JSON file:", error);
@@ -93,7 +91,8 @@ fetch("./db/dummyData.json")
 .then(response => response.json())
 .then(data => {
     //You can remove the map when you have data coming from the database its just used to change the status
-    data.map(items=>{return{...items,status:"Due"}}).forEach(element => {processDataDue(element);});
+    data.map(items=>{return{...items,status:"Due"}}).forEach(processDataDue);
+    data.map(items=>{return{...items,status:"Due"}}).forEach(console.log);
 })
 .catch(error => {
     console.error("Error reading JSON file:", error);
@@ -266,12 +265,6 @@ document.querySelector('#approve input[type="submit"]').addEventListener('click'
     rejectMessage.value = "";
     console.log(urlEncodedData);
 })
-
-
-
-
-
-
 
 
 async function sendToDb(url, formData) {
